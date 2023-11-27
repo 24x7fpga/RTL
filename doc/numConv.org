@@ -1,0 +1,115 @@
+#+TITLE: Binary Numbers and Number Conversion
+#+AUTHOR: 24x7 FPGA
+#+Date: [10/06/2023 Friday]
+#+Roam_Tags:
+#+Startup: showeverything latexpreview
+#+Options: toc:2
+
+* Table of Contents :toc: 
+
+
+* Types of number system
+
+There are a different kinds of number system used in mathematics. Here are few number system that are frequently used in computer science and engineering. 
+
+** Decimal Number System (Base 10)
+
+- This is most widely used number system in everyday life. 
+- It uses 10 digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+- Each digit's position represents the power of 10.
+
+E.g., 435.76 can be written as $4 \times 10^2 + 3 \times 10^1 + 5 \times 10^0 + 7 \times 10^{-1} + 6 \times 10^{-2}$.
+
+** Binary Number System (Base2)
+
+- This is the number system that computers and machines can understand as there are only two number 0 and 1.
+- Each digit's position represents the power of 2.
+- It is represented as :  $... + a_3 \times 2^3 + a_2 \times 2^2 + a_1 \times 2^1 + a_0 \times 2^0 + a_{-1} \times 2^{-1} + a_{-2} \times 2^{-2} + ...$  .
+
+E.g., 43.76 can be written as 101011.11000010100011111011
+
+** Ocatal Number system (Base8)
+
+- Octal number are not common anymore. They were used mostly in the old generation computer.
+- The value of a number is represented using 8 numbers from 0, 1, 2, 3, 4, 5, 6, 7.
+- Each digit position is described in powers of 8
+
+E.g., 64 in octal is 52 in decimal
+
+
+** Hexadecimal Number System (Base16)
+
+- This is another number representation system that is widely used in computer science and engineering.
+- It is oftern used for computer addressing and color represntation.
+- Each digit's position is represented in powers of 16. Therefore, there are 16 digits that can be used to represent a number from 0, 1, 2, 3,4, 5, 6, 7, 8, 9, A, B, C, D, F.
+
+E.g., 345 in hexadecimal is 159 in decimal.
+
+Note: Other number representation formats avilable such as rational, irrational, complex, etc. that are beyond the scope of this study material. 
+
+It is also important to represent signed and unsigned numbers. There are also few other representation of numbers that are useful in the feild of digital design. They are as follows:
+
+** Binary Coded Decimal
+
+- In binary-enocded representation of decimal numbers each digit is represented using 4 binary bits.
+
+| Decimal | Binary |
+|---------+--------|
+|       0 |   0000 |
+|       1 |   0001 |
+|       2 |   0010 |
+|       3 |   0011 |
+|       4 |   0100 |
+|       5 |   0101 |
+|       6 |   0110 |
+|       7 |   0111 |
+|       8 |   1000 |
+|       9 |   1001 |
+           
+
+** Gray Code
+
+- Gray code is a numerical representation where there the transistion between one binary state to another differ by **only** one bit.
+- Gray code often comes in handy for applications such as rotary encoders, error detection, clock domain crossing, etc.
+
+| Decimal | Binary | Gray Code |
+|---------+--------+-----------|
+|       0 |    000 |       000 |
+|       1 |    001 |       001 |
+|       2 |    001 |       011 |
+|       3 |    011 |       010 |
+|       4 |    100 |       110 |
+|       5 |    101 |       111 |
+|       6 |    110 |       101 |
+|       7 |    111 |       100 |
+
+- There are various algroithms to convert from gray to binary and binary to gray. 
+- Will we look at one such alogorithm later in this chapter.
+
+** Excess-3
+
+- Excess-3 is a legacy numerical representation where the binary number is added with 3.
+
+** One's Complement
+
+- One's complement is used to represent positive and negative numbers. 
+- The most significant bit (MSB) is used to represent the polarity of the number. If it is '1' it is a negative number or else positive number.
+- The range of numbers that can be represented is from $-(2^{n} -1 to 2^{n-1}). FOr 8 bits the range is from -128 to +127.
+- One's complement is acheived by simply fliping the binary bits.
+
+E.g., 3 in binary is 011. One's complement is achieved by flipping the bits i.e., 100.
+
+** Two's Complement
+
+- Two's complement is achieved by add 1 to the one's complement result of the binary number.
+- It is mostly used to signed addition and subtraction of binary numbers.
+- The simple addition operation in hardware and software makes is efficient for digital compuations.
+
+
+* Reference
+
+1. [[https://www.amazon.com/Digital-Design-M-Morris-Mano/dp/013212937X][Digital Design by Morris Mano.]]
+2. [[http://www.sunburst-design.com/papers/CummingsSNUG2008Boston_CDC.pdf][Sunburst Paper for Gray to Binary conversion].
+
+
+
