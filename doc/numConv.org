@@ -109,7 +109,7 @@ E.g., 3 in binary is 011. One's complement is achieved by flipping the bits i.e.
 * Reference
 
 1. [[https://www.amazon.com/Digital-Design-M-Morris-Mano/dp/013212937X][Digital Design by Morris Mano.]]
-2. [[http://www.sunburst-design.com/papers/CummingsSNUG2008Boston_CDC.pdf][Sunburst Paper for Gray to Binary conversion].
+2. [[http://www.sunburst-design.com/papers/CummingsSNUG2008Boston_CDC.pdf][Sunburst Paper for Gray to Binary conversion]].
 
 
 
