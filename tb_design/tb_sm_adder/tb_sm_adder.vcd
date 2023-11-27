@@ -1,0 +1,32 @@
+$date
+	Fri Oct 27 21:07:14 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_sm_adder $end
+$var wire 4 ! res [3:0] $end
+$var reg 4 " opA [3:0] $end
+$var reg 4 # opB [3:0] $end
+$var reg 4 $ temp [3:0] $end
+$scope module DUT $end
+$var wire 4 % opA [3:0] $end
+$var wire 4 & opB [3:0] $end
+$var reg 4 ' res [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1001 '
+b110 &
+b1111 %
+b1111 $
+b110 #
+b1111 "
+b1001 !
+$end
+#10
