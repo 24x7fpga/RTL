@@ -35,7 +35,7 @@ end
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("/home/kiran/fpgaProjects/iVerilog/design/numConv") 
+// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/numConv") 
 // End:
 
 

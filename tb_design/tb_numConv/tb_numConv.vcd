@@ -1,0 +1,32 @@
+$date
+	Tue Dec 12 13:43:46 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_numConv $end
+$var wire 4 ! gray_2_bin [3:0] $end
+$var wire 4 " bin_2_gray [3:0] $end
+$var reg 4 # bin [3:0] $end
+$scope module DUT $end
+$var wire 4 $ bin [3:0] $end
+$var wire 4 % bin_2_gray [3:0] $end
+$var reg 4 & gray_2_bin [3:0] $end
+$var integer 32 ' i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100 '
+b1010 &
+b1111 %
+b1010 $
+b1010 #
+b1111 "
+b1010 !
+$end
+#10
