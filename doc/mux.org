@@ -1,0 +1,158 @@
+#+Title: Multiplexer (MUX)
+#+Startup: showeverything
+#+Options: toc:4
+
+* TABLE OF CONTENTS :TOC:
+- [[#multiplexer-mux-an-overview][MULTIPLEXER (MUX): An Overview]]
+- [[#need-for-multiplexers][NEED FOR MULTIPLEXERS]]
+- [[#applications][APPLICATIONS]]
+- [[#design-2-to-1-mux][DESIGN: 2-to-1 MUX]]
+  - [[#verilog-code-2-to-1-mux][VERILOG CODE: 2-to-1 MUX]]
+- [[#design-4-to-1-mux][DESIGN: 4-TO-1 mux]]
+  - [[#verilog-code-4-to-1-mux][VERILOG CODE: 4-to-1 MUX]]
+- [[#multiplexer-treechainig-multiplexer][MULTIPLEXER TREE/CHAINIG MULTIPLEXER]]
+- [[#design-8-to-1-mux][Design: 8-to-1 MUX]]
+  - [[#verilog-code-8-to-1-mux-using-4-to-1-mux][VERILOG CODE: 8-to-1 MUX using 4-to-1 MUX]]
+- [[#advantagesdisadvantages-of-mutliplexer][ADVANTAGES/DISADVANTAGES OF MUTLIPLEXER]]
+- [[#implementing-logic-gates-using-multiplexer][IMPLEMENTING LOGIC GATES USING MULTIPLEXER]]
+
+* MULTIPLEXER (MUX): An Overview
+
+A multiplexer (MUX) is a data selection circuit that plays a crucial role in information processing and data communication. It is combinational circuit that connects one of many data input lines to the output based on the select lines/contol signal. The number of select lines determines the number of input lines. A MUX with 'n' select lines can accomodate '2^n' input lines.
+
+* NEED FOR MULTIPLEXERS  
+
+The need for MUXs arises where ever there is need to transmit multiple data over a shared communication channel.
+
+1. Resource Optimization: Comminication medium is be shared between multiple sources with the aid of a MUX thereby reducing the need of a dedicated channel for each source. Data routing is reduced as it uses the same communication channel. The number of pins required for input and output is also reduced contributing to compact and cost effective designs.
+2. Bandwidth Efficiency: Multiple signals can be transmitted over a sigal channel by using a MUX by maximizing the available bandwidth.
+3. Time Division Multiplexing (TDM): Data from different source are allocated the communication channel at different times with the help of multiplexers. 
+ 
+* APPLICATIONS
+
+Multiplexers are used widely in a diverse range of fields, some of the use cases are given below:
+
+1. Telecommunication: Combining multiple voice or data channel onto a single transmission line (CDMA, FDM, WDM, etc.).
+2. Digital Electronics: In digital systems and microprocessors, multiplexers are employed to select between different input sources or to route data within the system (parallel to serial converter, 7 Segment display).
+3. Data Acquistion: Multiplexers are used extensively for data collection from different sensors or measurement devices such as ADC/DAC.
+4. Networking: In a networking system where multiple data streams are combined to transmit over the network.
+5. Memory Addressing: Multiplexers are used in address decoding and encoding.
+ 
+* DESIGN: 2-to-1 MUX
+
+A 2-to-1 multiplexer consits of two inputs 'd0' and 'd1' and single select line 's0' and an output 'z'.
+
+Truth Table: 2-to-1 MUX
+
+| s0 | d1 | d0 | z |
+|----+----+----+---|
+|  0 | x  | 0  | 0 |
+|  0 | x  | 1  | 1 |
+|  1 | 0  | x  | 0 |
+|  1 | 1  | x  | 1 |
+
+Boolean Equation: z = s0 * d1 + s0' * d0
+
+** VERILOG CODE: 2-to-1 MUX
+
+#+begin_src verilog
+module mux2_to_1(d0,d1,s0,z)
+  input d0,d1,s0;
+  output z;
+
+  assign z = s0 ? d0 : d1;
+
+endmodule
+#+end_src
+
+
+* DESIGN: 4-TO-1 mux
+
+ A 4-to-1 multiplexer comprises of four inputs "d3, d2, d1, d0" and two select lines "s1,s0". From the truth table of 2-to-1 MUX it can be seen the input is connected to output based on the select lines. 
+
+Truth Table: 4-to-1 MUX
+
+| s1 | s0 | z  |
+|----+----+----|
+|  0 |  0 | d0 |
+|  0 |  1 | d1 |
+|  1 |  0 | d2 |
+|  1 |  1 | d3 |
+
+Boolean Equation: z = (s1' * s0' * d0) + (s1' * s0 * d1) + (s1 * s0' * d2) + (s1 * s0 * d3)
+
+** VERILOG CODE: 4-to-1 MUX
+
+#+begin_src verilog
+module mux4_to_1(s1,s0,d3,d2,d1,d0,z)
+  input s1,s0,d3,d2,d1,d0;
+  ouput z;
+
+// method 1: priority based MUX using assign statement
+  assign z = s1 ? (s0 ? d3 : d2) : (s1 ? d1 : d0);
+
+// method 2: case-statement
+  always@(*)
+    begin
+      case({s1,s0})
+        2'b00 : z <= d0;
+        2'b01 : z <= d1;
+        2'b10 : z <= d2;
+        2'b11 : z <= d3;
+      endcase
+    end
+endmodule
+#+end_src
+
+
+* MULTIPLEXER TREE/CHAINIG MULTIPLEXER
+
+Multiplexers with large number of inputs can be built by cascading smaller multiplexers. For example, 8-to-1 multiplexer can be built using two 4-to-1 multiplexer. Similarly, a 4-to-1 multiplexer can be built using two 2-to-1 multiplexer. In other words any N-to-1 multiplexer can be built using smaller n-to-1 multiplexers.
+
+* Design: 8-to-1 MUX
+
+Truth Table: 8-to-1 MUX
+
+| s2 | s1 | s0 | z  |
+|----+----+----+----|
+|  0 |  0 |  0 | d0 |
+|  0 |  0 |  1 | d1 |
+|  0 |  1 |  0 | d2 |
+|  0 |  1 |  1 | d3 |
+|----+----+----+----|
+|  1 |  0 |  0 | d4 |
+|  1 |  0 |  1 | d5 |
+|  1 |  1 |  0 | d6 |
+|  1 |  1 |  1 | d7 |
+
+** VERILOG CODE: 8-to-1 MUX using 4-to-1 MUX
+
+#+begin_src verilog
+module mux8_to_1(s2,s1,s0,d7,d6,d5,d4,d3,d2,d1,d0,z)
+  input s2,s1,s0,d7,d6,d5,d4,d3,d2,d1,d0;
+  output z;
+
+  signal tempz1, tempz2;
+
+  mux4-to-1 mux1(.s1(s1),.s0(s0),.d3(d3),.d2(d2),.d1(d1),.d0(d0),.z(tempz1));
+  mux4-to-1 mux2(.s1(s1),.s0(s0),.d3(d7),.d2(d6),.d1(d5),.d0(d3),.z(tempz2));
+
+  assign z = s2 ? tempz2 : tempz1;
+endmodule
+#+end_src
+
+* ADVANTAGES/DISADVANTAGES OF MUTLIPLEXER
+**** Advantages
+1. Reduces the number of wires used thereby reducing the overall design cost and complexity.
+2. Simplidies logic design.
+3. Does not require k-maps to build the design.
+
+**** Disadvantages
+1. Increases complexitiy in many-to-1 designs.
+2. Serialization nature of multiplexers are a limitaion in simulataneous data transfer.
+3. Process of selecting and transmitting data  serially adds to propogation delay in time-sensitive applications.
+4. Implementation of high number of inputs on FPGA may require signification portion of available resources, limiting the overall design flexibility.
+5. In a shared channel, there is a risk of crosstalk or interference between multiplexed signals.
+6. In high-frequency applications, the use of multiplezers can impact signal integrity due to issues like signal attenuation and distortion.
+
+* IMPLEMENTING LOGIC GATES USING MULTIPLEXER
