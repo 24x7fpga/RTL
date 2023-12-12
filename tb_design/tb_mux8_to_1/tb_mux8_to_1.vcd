@@ -1,0 +1,111 @@
+$date
+	Tue Dec 12 00:16:49 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_mux8_to_1 $end
+$var wire 1 ! z $end
+$var reg 8 " din [7:0] $end
+$var reg 3 # sel [2:0] $end
+$scope module DUT $end
+$var wire 8 $ din [7:0] $end
+$var wire 3 % sel [2:0] $end
+$var wire 1 ! z $end
+$var wire 1 & temp2 $end
+$var wire 1 ' temp1 $end
+$scope module m1 $end
+$var wire 4 ( din [3:0] $end
+$var wire 2 ) sel [1:0] $end
+$var reg 1 ' z $end
+$upscope $end
+$scope module m2 $end
+$var wire 4 * din [3:0] $end
+$var wire 2 + sel [1:0] $end
+$var reg 1 & z $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 +
+b1010 *
+b0 )
+b1010 (
+0'
+0&
+b0 %
+b10101010 $
+b0 #
+b10101010 "
+0!
+$end
+#5
+1!
+1'
+1&
+b1 )
+b1 +
+b1 #
+b1 %
+#10
+0!
+0'
+0&
+b10 )
+b10 +
+b10 #
+b10 %
+#15
+1'
+b11 )
+b11 +
+b1111 (
+b100 *
+b1001111 "
+b1001111 $
+b111 #
+b111 %
+#20
+b0 )
+b0 +
+b100 #
+b100 %
+#25
+b1 )
+b1 +
+b101 #
+b101 %
+#30
+1&
+1!
+b10 )
+b10 +
+b1111 *
+b11111111 "
+b11111111 $
+b10 #
+b10 %
+#35
+b11 )
+b11 +
+b11 #
+b11 %
+#40
+b0 )
+b0 +
+b0 #
+b0 %
+#45
+0'
+b1 )
+b1 +
+b101 (
+b11110101 "
+b11110101 $
+b101 #
+b101 %
