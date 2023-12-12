@@ -86,7 +86,7 @@ Boolean Equation: z = (s1' * s0' * d0) + (s1' * s0 * d1) + (s1 * s0' * d2) + (s1
 #+begin_src verilog
 module mux4_to_1(s1,s0,d3,d2,d1,d0,z)
   input s1,s0,d3,d2,d1,d0;
-  ouput z;
+  ouput reg z;
 
 // method 1: priority based MUX using assign statement
   assign z = s1 ? (s0 ? d3 : d2) : (s1 ? d1 : d0);
@@ -95,10 +95,10 @@ module mux4_to_1(s1,s0,d3,d2,d1,d0,z)
   always@(*)
     begin
       case({s1,s0})
-        2'b00 : z <= d0;
-        2'b01 : z <= d1;
-        2'b10 : z <= d2;
-        2'b11 : z <= d3;
+        2'b00 : z = d0;
+        2'b01 : z = d1;
+        2'b10 : z = d2;
+        2'b11 : z = d3;
       endcase
     end
 endmodule
