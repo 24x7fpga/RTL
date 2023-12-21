@@ -1,0 +1,135 @@
+$date
+	Wed Dec 20 21:59:35 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_d_ff_en $end
+$var wire 1 ! q $end
+$var parameter 32 " t $end
+$var reg 1 # clk $end
+$var reg 1 $ d $end
+$var reg 1 % en $end
+$var reg 1 & rst $end
+$scope module DUT $end
+$var wire 1 # clk $end
+$var wire 1 $ d $end
+$var wire 1 % en $end
+$var wire 1 ! q $end
+$var wire 1 & rst $end
+$var reg 1 ' d_nxt $end
+$var reg 1 ( d_reg $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1010 "
+$end
+#0
+$dumpvars
+x(
+x'
+0&
+0%
+1$
+0#
+x!
+$end
+#5
+0'
+0!
+0(
+1#
+#10
+0#
+#15
+1#
+#20
+0#
+1&
+#25
+1#
+#30
+1'
+1%
+0#
+#35
+1!
+1(
+1#
+#40
+0#
+#45
+1#
+#50
+0#
+#55
+1#
+#60
+0#
+#65
+1#
+#70
+0%
+0#
+#75
+1#
+#80
+0#
+#85
+1#
+#90
+0'
+0$
+1%
+0#
+#95
+0!
+0(
+1#
+#100
+0#
+#105
+1#
+#110
+0#
+#115
+1#
+#120
+0#
+#125
+1#
+#130
+1'
+1$
+0#
+#135
+1!
+1(
+1#
+#140
+0#
+#145
+1#
+#150
+0#
+#155
+1#
+#160
+0#
+#165
+1#
+#170
+0'
+0$
+0#
+#175
+0!
+0(
+1#
+#180
+0#
