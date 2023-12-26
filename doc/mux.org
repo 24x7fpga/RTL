@@ -10,7 +10,7 @@
   - [[#verilog-code-2-to-1-mux][VERILOG CODE: 2-to-1 MUX]]
 - [[#design-4-to-1-mux][DESIGN: 4-TO-1 mux]]
   - [[#verilog-code-4-to-1-mux][VERILOG CODE: 4-to-1 MUX]]
-- [[#multiplexer-treechainig-multiplexer][MULTIPLEXER TREE/CHAINIG MULTIPLEXER]]
+- [[#multiplexer-tree][MULTIPLEXER TREE]]
 - [[#design-8-to-1-mux][Design: 8-to-1 MUX]]
   - [[#verilog-code-8-to-1-mux-using-4-to-1-mux][VERILOG CODE: 8-to-1 MUX using 4-to-1 MUX]]
 - [[#advantagesdisadvantages-of-mutliplexer][ADVANTAGES/DISADVANTAGES OF MUTLIPLEXER]]
@@ -105,7 +105,7 @@ endmodule
 #+end_src
 
 
-* MULTIPLEXER TREE/CHAINIG MULTIPLEXER
+* MULTIPLEXER TREE
 
 Multiplexers with large number of inputs can be built by cascading smaller multiplexers. For example, 8-to-1 multiplexer can be built using two 4-to-1 multiplexer. Similarly, a 4-to-1 multiplexer can be built using two 2-to-1 multiplexer. In other words any N-to-1 multiplexer can be built using smaller n-to-1 multiplexers.
 
