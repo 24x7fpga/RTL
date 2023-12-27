@@ -14,6 +14,7 @@
 - [[#design-1-to-8-demux][DESIGN: 1-to-8 DEMUX]]
   - [[#verilog-code-1-to-8-demux-using-1-to-4-demux][VERILOG CODE: 1-to-8 DEMUX using 1-to-4 DEMUX]]
 - [[#advantages-disadvantages-of-demux][ADVANTAGES/ DISADVANTAGES OF DEMUX]]
+- [[#additional-reference][ADDITIONAL REFERENCE]]
 
 * DEMULTIPLEXER (DEMUX): An Overview
 
@@ -186,3 +187,6 @@ endmodule
 2. As the number of output channels increases, the complexity of the control logic increases.
 3. Serialization is a limitation where there is simultaneous data transfer to multiple channel is critical.
 
+* ADDITIONAL REFERENCE
+
+1. [[https://lambdageeks.com/multiplexer-mux-demux/][Lambda Geeks]]
