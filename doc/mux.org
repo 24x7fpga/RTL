@@ -18,7 +18,7 @@
 
 * MULTIPLEXER (MUX): An Overview
 
-A multiplexer (MUX) is a data selection circuit that plays a crucial role in information processing and data communication. It is combinational circuit that connects one of many data input lines to the output based on the select lines/contol signal. The number of select lines determines the number of input lines. A MUX with 'n' select lines can accomodate '2^n' input lines.
+A multiplexer (MUX) is a data selection circuit that plays a crucial role in information processing and data communication. It is a combinational circuit that connects one of many data input lines to the output based on the select lines/contol signal. The number of select lines determines the number of input lines. A MUX with 'n' select lines can accomodate '2^n' input lines.
 
 * NEED FOR MULTIPLEXERS  
 
