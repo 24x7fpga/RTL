@@ -1,0 +1,188 @@
+#+Title: Demultiplexer (DEMUX)
+#+Startup: showeverything
+#+Options: toc:4
+
+* TABLE OF CONTENTS :TOC:
+- [[#demultiplexer-demux-an-overview][DEMULTIPLEXER (DEMUX): An Overview]]
+- [[#need-for-demultiplexers][NEED FOR DEMULTIPLEXERS]]
+- [[#applications][APPLICATIONS]]
+- [[#design-1-to-2-demux][DESIGN: 1-to-2 DEMUX]]
+  - [[#verilog-code-1-to-2-demux][VERILOG CODE: 1-to-2 DEMUX]]
+- [[#design-1-to-4-demux][DESIGN: 1-to-4 DEMUX]]
+  - [[#verilog-code-1-to-4-demux][VERILOG CODE: 1-to-4 DEMUX]]
+- [[#demultiplexer-tree][DEMULTIPLEXER TREE]]
+- [[#design-1-to-8-demux][DESIGN: 1-to-8 DEMUX]]
+  - [[#verilog-code-1-to-8-demux-using-1-to-4-demux][VERILOG CODE: 1-to-8 DEMUX using 1-to-4 DEMUX]]
+- [[#advantages-disadvantages-of-demux][ADVANTAGES/ DISADVANTAGES OF DEMUX]]
+
+* DEMULTIPLEXER (DEMUX): An Overview
+
+A DEMUX or data distributor is a one-to-many combinational circuit that receives inputs from a single input line and transmits the same information over one of 'n' possible output lines. DEMUX transmit the same data that is received on the input to different destinations. A demultiplexer is a 1-to-N device, where is N/n is the number of outputs and with 'm' select linee, therefore, 2^m = n. 
+
+* NEED FOR DEMULTIPLEXERS
+
+Primary need to demultiplexers arise in scenarios where single data stream requires to be directed to multiple destinations.
+
+1. Data distribution.
+2. Memory address decoding.
+3. Communication system.
+4. Control logic.
+
+* APPLICATIONS
+
+Demultiplexers are used in several feilds where there is a necessity of connecting a single source to several outputs. Some of the applications are listed below:
+
+1. Demultiplexers are used for data routing.
+2. Used in synchronous systems for data transmissions.
+3. Selecting different banks for memory decoding.
+
+* DESIGN: 1-to-2 DEMUX
+
+The truth table of 1-to-2 demultiplexer os shown below, in which the inputs din is routed to z0 or z1 depending on the value of the select line sel.
+
+| sel | din | z1 | z0 |
+|-----+-----+----+----|
+|   0 |   0 |  0 |  0 |
+|   0 |   1 |  0 |  1 |
+|   1 |   0 |  0 |  0 |
+|   1 |   1 |  1 |  0 |
+
+Boolean Equation: z0 = sel' * din and z1 = sel * din.
+
+** VERILOG CODE: 1-to-2 DEMUX
+
+#+begin_src verilog
+module demux1_to_2(din,sel,z);
+   input din, sel;
+   output [1:0] z;
+   
+   assign z0 = ~sel and din;
+   assign z1 =  sel and din;
+
+endmodule
+#+end_src
+* DESIGN: 1-to-4 DEMUX
+
+A 1-to-4 demultoplexer consists of n=4 outputs, therefore, the select lines are m = log2(4) = 2 (log2 = log base 2). The truth table is now simplifed than before.
+
+| sel[1] | sel[0] | z[3] | z[2] | z[1] | z[0] |
+|--------+--------+------+------+------+------|
+|      0 |      0 |    0 |    0 |    0 |  din |
+|      0 |      1 |    0 |    0 |  din |    0 |
+|      1 |      0 |    0 |  din |    0 |    0 |
+|      1 |      1 |  din |    0 |    0 |    0 |
+
+** VERILOG CODE: 1-to-4 DEMUX
+
+A 1-to-4 demux can be built using case statements as shown below.
+
+#+begin_src verilog
+`timescale 1ns/1ns
+
+module demux1_to_4(/*AUTOARG*/
+   // Outputs
+   z,
+   // Inputs
+   din, sel
+   );
+   input din;
+   input [1:0] sel;
+   output reg [3:0] z;
+   
+   /*AUTOREG*/ 
+   /*AUTOWIRE*/
+
+   always@(*)
+     begin
+	z = 4'h0;
+	case(sel)
+	  2'h0 : z[0] = din;
+	  2'h1 : z[1] = din;
+	  2'h2 : z[2] = din;
+	  2'h3 : z[3] = din;
+	endcase // case (sel)
+     end
+ 
+endmodule 
+// Local Variables: 
+// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// End:
+
+#+end_src
+
+* DEMULTIPLEXER TREE
+
+Demultiplexers with larger outputs can be built using smaller demultiplexers. A 1-to-8 demultiplexer can be built using two 1-to-4 demultiplexer.  
+
+* DESIGN: 1-to-8 DEMUX
+
+Truth table for 1-to-8 demux is shown below. For a 8 ouput line demux, 3 select lines are required.
+
+| sel[1] | sel[1] | sel[0] | z[7] | z[6] | z[5] | z[4] | z[3] | z[2] | z[1] | z[0] |
+|--------+--------+--------+------+------+------+------+------+------+------+------|
+|      0 |      0 |      0 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |  din |
+|      0 |      0 |      1 |    0 |    0 |    0 |    0 |    0 |    0 |  din |    0 |
+|      0 |      1 |      0 |    0 |    0 |    0 |    0 |    0 |  din |    0 |    0 |
+|      0 |      1 |      1 |    0 |    0 |    0 |    0 |  din |    0 |    0 |    0 |
+|      1 |      0 |      0 |    0 |    0 |    0 |  din |    0 |    0 |    0 |    0 |
+|      1 |      0 |      1 |    0 |    0 |  din |    0 |    0 |    0 |    0 |    0 |
+|      1 |      1 |      0 |    0 |  din |    0 |    0 |    0 |    0 |    0 |    0 |
+|      1 |      1 |      1 |  din |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
+
+** VERILOG CODE: 1-to-8 DEMUX using 1-to-4 DEMUX
+
+#+begin_src verilog
+`timescale 1ns/1ns
+
+module demux1_to_8(/*AUTOARG*/
+   // Outputs
+   z,
+   // Inputs
+   din, sel
+   );
+   input din;
+   input [2:0] sel;
+   output [7:0] z;
+   
+/*AUTOREG*/ 
+/*AUTOWIRE*/
+
+   wire [3:0] 	tempz1;
+   wire [3:0] 	tempz2;
+   
+demux1_to_4 DEM1 (/*AUTOINST*/
+		  // Outputs
+		  .z			(tempz1[3:0]),
+		  // Inputs
+		  .din			(din),
+		  .sel			(sel[1:0])); 
+demux1_to_4 DEM2 (/*AUTOINST*/
+		  // Outputs
+		  .z			(tempz2[3:0]),
+		  // Inputs
+		  .din			(din),
+		  .sel			(sel[1:0]));
+   
+   assign z = sel[2] ? {tempz2,4'h0} : {4'h0,tempz1};
+   
+endmodule 
+// Local Variables: 
+// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// End:
+
+#+end_src
+* ADVANTAGES/ DISADVANTAGES OF DEMUX
+
+**** Advantages
+
+1. Demultiplexer distributes single data stream to multiple destination providing flexible and efficient means of data flow.
+2. In memory systems, demultiplexers are utilized for address decoding.
+3. In digital communication systems, demultiplexers are essential for extracting data streams from combined scenarios like TDM and FDM.
+4. Demultiplexers enable efficient use of resources by allowing a single data stream to be directed to different destinations, reducing the need for redundant paths.
+
+**** Disadvantages
+
+1. Demultiplexers introduce propagations delays. Based on the design complexity, verification and debugging processes challenging.
+2. As the number of output channels increases, the complexity of the control logic increases.
+3. Serialization is a limitation where there is simultaneous data transfer to multiple channel is critical.
+
