@@ -45,3 +45,6 @@ module fsm_pos_edge_mealy(/*AUTOARG*/
    assign dout = (st_reg == s0 && din == 1);
 
 endmodule // fsm_pos_edge_mealy
+// Local Variables: 
+// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// End: 
