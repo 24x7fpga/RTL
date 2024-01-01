@@ -1,0 +1,141 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x14be04a00 .scope module, "tb_edge_detect" "tb_edge_detect" 2 2;
+ .timescale -9 -9;
+P_0x60000378dac0 .param/l "t" 1 2 3, +C4<00000000000000000000000000001010>;
+v0x60000108cb40_0 .var "clk", 0 0;
+v0x60000108cbd0_0 .var "din", 0 0;
+v0x60000108cc60_0 .net "dualEdge", 0 0, L_0x60000098cbd0;  1 drivers
+v0x60000108ccf0_0 .var/i "k", 31 0;
+v0x60000108cd80_0 .net "negEdge", 0 0, L_0x60000098cb60;  1 drivers
+v0x60000108ce10_0 .net "posEdge", 0 0, L_0x60000098ca80;  1 drivers
+v0x60000108cea0_0 .var "rst", 0 0;
+v0x60000108cf30_0 .var "seq", 0 20;
+E_0x60000378db40 .event negedge, v0x60000108c750_0;
+E_0x60000378db80 .event anyedge, v0x60000108cab0_0;
+S_0x14be04b70 .scope module, "DUT" "edge_detect" 2 18, 3 2 0, S_0x14be04a00;
+ .timescale -9 -9;
+    .port_info 0 /OUTPUT 1 "posEdge";
+    .port_info 1 /OUTPUT 1 "negEdge";
+    .port_info 2 /OUTPUT 1 "dualEdge";
+    .port_info 3 /INPUT 1 "clk";
+    .port_info 4 /INPUT 1 "rst";
+    .port_info 5 /INPUT 1 "din";
+L_0x60000098ca10 .functor NOT 1, v0x60000108c870_0, C4<0>, C4<0>, C4<0>;
+L_0x60000098ca80 .functor AND 1, L_0x60000098ca10, v0x60000108cbd0_0, C4<1>, C4<1>;
+L_0x60000098caf0 .functor NOT 1, v0x60000108cbd0_0, C4<0>, C4<0>, C4<0>;
+L_0x60000098cb60 .functor AND 1, v0x60000108c870_0, L_0x60000098caf0, C4<1>, C4<1>;
+L_0x60000098cbd0 .functor OR 1, L_0x60000098ca80, L_0x60000098cb60, C4<0>, C4<0>;
+v0x60000108c630_0 .net *"_ivl_0", 0 0, L_0x60000098ca10;  1 drivers
+v0x60000108c6c0_0 .net *"_ivl_4", 0 0, L_0x60000098caf0;  1 drivers
+v0x60000108c750_0 .net "clk", 0 0, v0x60000108cb40_0;  1 drivers
+v0x60000108c7e0_0 .net "din", 0 0, v0x60000108cbd0_0;  1 drivers
+v0x60000108c870_0 .var "din_reg", 0 0;
+v0x60000108c900_0 .net "dualEdge", 0 0, L_0x60000098cbd0;  alias, 1 drivers
+v0x60000108c990_0 .net "negEdge", 0 0, L_0x60000098cb60;  alias, 1 drivers
+v0x60000108ca20_0 .net "posEdge", 0 0, L_0x60000098ca80;  alias, 1 drivers
+v0x60000108cab0_0 .net "rst", 0 0, v0x60000108cea0_0;  1 drivers
+E_0x60000378dbc0 .event posedge, v0x60000108c750_0;
+    .scope S_0x14be04b70;
+T_0 ;
+    %wait E_0x60000378dbc0;
+    %load/vec4 v0x60000108cab0_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x60000108c870_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x60000108c7e0_0;
+    %assign/vec4 v0x60000108c870_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x14be04a00;
+T_1 ;
+    %pushi/vec4 415898, 0, 21;
+    %store/vec4 v0x60000108cf30_0, 0, 21;
+    %end;
+    .thread T_1;
+    .scope S_0x14be04a00;
+T_2 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x60000108cb40_0, 0, 1;
+    %end;
+    .thread T_2;
+    .scope S_0x14be04a00;
+T_3 ;
+    %delay 5, 0;
+    %load/vec4 v0x60000108cb40_0;
+    %inv;
+    %store/vec4 v0x60000108cb40_0, 0, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0x14be04a00;
+T_4 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x60000108cea0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x60000108cea0_0, 0, 1;
+    %end;
+    .thread T_4;
+    .scope S_0x14be04a00;
+T_5 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x60000108cbd0_0, 0, 1;
+T_5.0 ;
+    %load/vec4 v0x60000108cea0_0;
+    %pad/u 32;
+    %pushi/vec4 1, 0, 32;
+    %cmp/e;
+    %flag_get/vec4 4;
+    %cmpi/ne 1, 0, 1;
+    %jmp/0xz T_5.1, 6;
+    %wait E_0x60000378db80;
+    %jmp T_5.0;
+T_5.1 ;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x60000108ccf0_0, 0, 32;
+T_5.2 ;
+    %load/vec4 v0x60000108ccf0_0;
+    %cmpi/s 21, 0, 32;
+    %jmp/0xz T_5.3, 5;
+    %wait E_0x60000378db40;
+    %load/vec4 v0x60000108cf30_0;
+    %pushi/vec4 20, 0, 34;
+    %load/vec4 v0x60000108ccf0_0;
+    %pad/s 34;
+    %sub;
+    %part/s 1;
+    %store/vec4 v0x60000108cbd0_0, 0, 1;
+    %load/vec4 v0x60000108ccf0_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x60000108ccf0_0, 0, 32;
+    %jmp T_5.2;
+T_5.3 ;
+    %delay 20, 0;
+    %vpi_call 2 46 "$finish" {0 0 0};
+    %end;
+    .thread T_5;
+    .scope S_0x14be04a00;
+T_6 ;
+    %vpi_call 2 50 "$dumpfile", "tb_edge_detect.vcd" {0 0 0};
+    %vpi_call 2 51 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x14be04a00 {0 0 0};
+    %end;
+    .thread T_6;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_edge_detect.v";
+    "/Users/kiran/Projects/fpgaProjects/iVerilog/design/edge_detect/edge_detect.v";
