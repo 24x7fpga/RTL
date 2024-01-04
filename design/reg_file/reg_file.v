@@ -19,13 +19,16 @@ module reg_file #(parameter width = 3)(/*AUTOARG*/
 
    reg [n-1:0] 	  data_reg [0:2**m-1];
    
-   
+  // write operation
+     
   always@(posedge clk)
     begin
        if(wr_en)
 	 data_reg[addr] <= wr_data;
     end
 
+   // read operation
+   
    assign rd_data = (wr_en) ? 'h0 : data_reg[addr];
 	  
 endmodule 
