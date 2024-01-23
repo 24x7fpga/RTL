@@ -9,8 +9,11 @@ module tb_freq_div();
    /*AUTOREG*/ 
    /*AUTOWIRE*/ 
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
+   wire			div2;			// From DUT of freq_div.v
    wire			div3;			// From DUT of freq_div.v
+   wire			div4;			// From DUT of freq_div.v
    wire			div5;			// From DUT of freq_div.v
+   wire			div6;			// From DUT of freq_div.v
    wire			div7;			// From DUT of freq_div.v
    // End of automatics
 
@@ -18,6 +21,9 @@ module tb_freq_div();
 	      // Parameters
 	      .n			(n)) DUT (/*AUTOINST*/
 						  // Outputs
+						  .div2			(div2),
+						  .div4			(div4),
+						  .div6			(div6),
 						  .div3			(div3),
 						  .div5			(div5),
 						  .div7			(div7),
