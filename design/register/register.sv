@@ -25,7 +25,6 @@ always_ff@(posedge clk)
   else
     q <= d;
    
- 
 endmodule 
 // Local Variables: 
 // verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
