@@ -1,4 +1,3 @@
-
 function [2:0] comp (input [31:0] a, b);
    
    logic [2:0] res;
@@ -13,4 +12,4 @@ function [2:0] comp (input [31:0] a, b);
    
    return res;
 
-endfunction
+endfunction // comp
