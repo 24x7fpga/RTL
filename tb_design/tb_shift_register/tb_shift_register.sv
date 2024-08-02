@@ -54,7 +54,7 @@ module tb_shift_register();
        din <= $urandom();
 
    // verify the result
-   always@(posedge clk)begin
+  always@(posedge clk)begin
       if(rst)begin
 	 queue_res = {0,0,0,0};  
 	 // Icarus Verilog does not support this => '{N{0}};
