@@ -1,7 +1,7 @@
 #+title: Icarus Verilog and GTKWave
 
-[Icarus Verilog](https://bleyer.org/icarus/) is an open-source Verilog simulation and synthesis tool. It's useful for simulating Verilog code and checking the functionality of digital designs. 
+[[https://bleyer.org/icarus/][Icarus Verilog]] is an open-source Verilog simulation and synthesis tool. It's useful for simulating Verilog code and checking the functionality of digital designs. 
 
-[GTKwave](https://gtkwave.sourceforge.net/) is a waveform viewer that is commonly used to visualize the simulation output from various digital design tools along with Icarus Verilog. 
+[[https://gtkwave.sourceforge.net/][GTKwave]] is a waveform viewer that is commonly used to visualize the simulation output from various digital design tools along with Icarus Verilog. 
 
 
