@@ -8,7 +8,7 @@ A [[https://github.com/24x7fpga/PythonScripts/blob/master/iVerilog/iv_design.py]
 
 Folder Structure:
 #+begin_src linux
-**iVerilog**
+*iVerilog*
 .
 ├── README.org
 ├── design
@@ -16,11 +16,10 @@ Folder Structure:
 └── tb_design
 #+end_src
 
-[[https://github.com/24x7fpga/iVerilog/tree/master/design][design]]: this repository consists of design file for the projects.
 
-[[https://github.com/24x7fpga/iVerilog/tree/master/doc][doc]]: a directory for storing project-related documents. 
-
-[[https://github.com/24x7fpga/iVerilog/tree/master/tb_design][tb_design]]: this reposittory holds all the testbench files for the design.
+- [[https://github.com/24x7fpga/iVerilog/tree/master/design][design]]: this repository consists of design file for the projects.
+- [[https://github.com/24x7fpga/iVerilog/tree/master/doc][doc]]: a directory for storing project-related documents. 
+- [[https://github.com/24x7fpga/iVerilog/tree/master/tb_design][tb_design]]: this reposittory holds all the testbench files for the design.
 
 
 List of design examples:
