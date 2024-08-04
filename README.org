@@ -22,7 +22,7 @@ Folder Structure:
 - [[https://github.com/24x7fpga/iVerilog/tree/master/tb_design][tb_design]]: this reposittory holds all the testbench files for the design.
 
 
-List of design examples:
+Ongoing list of design examples:
 
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/adder_subtractor][Adder Subtractor]]
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/assign_vs_if][Assign and If statement]]
