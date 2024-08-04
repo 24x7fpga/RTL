@@ -4,4 +4,37 @@
 
 [[https://gtkwave.sourceforge.net/][GTKwave]] is a waveform viewer that is commonly used to visualize the simulation output from various digital design tools along with Icarus Verilog. 
 
+A [[https://github.com/24x7fpga/PythonScripts/blob/master/iVerilog/iv_design.py][Python script]] was developed to generate the project folder structure and design blueprints in SystemVerilog/Verilog. Additionally, a [[https://github.com/24x7fpga/PythonScripts/blob/master/iVerilog/iv_run.py][run script]] was implemented to simulation of the design using Icarus Verilog and to visualize the simulation output using GTKwave.
 
+Folder Structure:
+**iVerilog**
+.
+├── README.org
+├── design
+├── doc
+└── tb_design
+
+[[https://github.com/24x7fpga/iVerilog/tree/master/design][design]]: this repository consists of design file for the projects.
+[[https://github.com/24x7fpga/iVerilog/tree/master/doc][doc]]: a directory for storing project-related documents. 
+[[https://github.com/24x7fpga/iVerilog/tree/master/tb_design][tb_design]]: this reposittory holds all the testbench files for the design.
+
+
+List of design examples:
+
+1. [[https://24x7fpga.com/rtl_directory/2024_06_05_22_56_41_half_adder/][Half Adder]]
+2. [[https://24x7fpga.com/rtl_directory/2024_06_08_11_32_42_full_adder/][Full Adder]]
+3. [[https://24x7fpga.com/rtl_directory/2024_06_13_12_22_45_multiplexer/][Multiplexer]]
+4. [[https://24x7fpga.com/rtl_directory/2024_06_14_22_07_44_de_multiplexer/][De-Multiplexer]]
+5. [[https://24x7fpga.com/rtl_directory/2024_06_23_20_40_25_encoder/][Encoder]]
+6. [[https://24x7fpga.com/rtl_directory/2024_06_23_21_30_22_decoder/][Decoder]]
+7. [[https://24x7fpga.com/rtl_directory/2024_07_06_15_54_47_comparator/][Comparator]]
+8. [[https://24x7fpga.com/rtl_directory/2024_07_06_19_23_36_register/][Register]]
+9. [[https://24x7fpga.com/rtl_directory/2024_07_06_19_54_50_shift_register/][Shift Register]]
+10. [[https://24x7fpga.com/rtl_directory/2024_07_10_20_30_35_universal_shift_register/][Universal Shift Register]]
+11. [[https://24x7fpga.com/rtl_directory/2024_07_16_22_30_28_up_down_counter/][Up/Down Counter]]
+12. [[https://24x7fpga.com/rtl_directory/2024_07_18_21_58_46_code_converter/][Code Converter]]
+13. [[https://24x7fpga.com/rtl_directory/2024_07_18_23_30_22_mod_n_counter/][Mod-N Counter]]
+14. [[https://24x7fpga.com/rtl_directory/2024_07_22_11_17_17_ring_counter/][Ring Counter]]
+15. [[https://24x7fpga.com/rtl_directory/2024_07_22_14_10_16_edge_detector/][Edge Detector]]
+16. [[https://24x7fpga.com/rtl_directory/2024_07_22_15_24_11_frequency_divider/][Frequency Divider]]
+17. [[https://24x7fpga.com/rtl_directory/2024_07_23_13_11_22_read_only_memory/][ROM]]
