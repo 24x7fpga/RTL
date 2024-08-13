@@ -35,7 +35,8 @@ module casex_nd_casez(/*AUTOARG*/
 	default : casex_x = 2'b00;
       endcase // casex (sel)
    end
-  
+ 
+   // note '?' is an alias for z
    always_comb begin
       casex(sel)
 	4'b0001 : casex_z = 2'b00;
@@ -66,6 +67,7 @@ module casex_nd_casez(/*AUTOARG*/
       endcase // casez (sel)
    end
    
+   // note '?' is an alias for z
    always_comb begin
       casez(sel)
 	4'b0001 : casez_z = 2'b00;
