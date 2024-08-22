@@ -57,7 +57,7 @@ Ongoing list of design examples:
 - [[https://24x7fpga.com/rtl_directory/2024_07_06_19_54_50_shift_register/][Shift Register]]
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/sm_adder][Signed Magnitude Adder]]
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/spi][SPI]]
-- [[https://github.com/24x7fpga/iVerilog/tree/master/design/fifo_buffer_syn][Synchronus FIFO]]
+- [[https://24x7fpga.com/rtl_directory/2024_08_22_14_57_15_synchronous_fifo/][Synchronus FIFO]]
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/uart][UART]]
 - [[https://github.com/24x7fpga/iVerilog/blob/master/design/univ_cntr/univ_cntr.v][Universal Counter]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_10_20_30_35_universal_shift_register/][Universal Shift Register]]
