@@ -24,6 +24,7 @@ Folder Structure:
 Ongoing list of design examples:
 
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/adder_subtractor][Adder Subtractor]]
+- [[https://24x7fpga.com/rtl_directory/2024_08_05_16_05_55_always_and_always_comb/][Always@(*) and Always_Comb]] 
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/assign_vs_if][Assign and If statement]]
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/fifo_asyn][Asynchronous FIFO]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_25_11_34_45_synchronous_and_asynchronous_reset/][Asynchrnous Reset]]
