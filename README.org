@@ -30,6 +30,7 @@ Ongoing list of design examples:
 - [[https://24x7fpga.com/rtl_directory/2024_07_25_11_34_45_synchronous_and_asynchronous_reset/][Asynchrnous Reset]]
 - [[https://github.com/24x7fpga/iVerilog/tree/master/design/barrel_shift][Barrel Shifter]]
 - [[https://github.com/24x7fpga/iVerilog/blob/master/design/block_vs_non_block/block_vs_non_block.sv][Blocking Vs Non-Blocking]]
+- [[https://24x7fpga.com/rtl_directory/2024_09_13_12_36_11_clock_gating/][Clock Gating]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_18_21_58_46_code_converter/][Code Converter]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_06_15_54_47_comparator/][Comparator]]
 - [[https://github.com/24x7fpga/iVerilog/blob/master/design/d_ff_en/d_ff_en.v][D-FF with Enable]]
