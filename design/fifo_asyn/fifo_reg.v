@@ -32,6 +32,6 @@ module fifo_reg(/*AUTOARG*/
 
 endmodule // fifo_reg
 // Local Variables:
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:
    

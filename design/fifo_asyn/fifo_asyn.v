@@ -86,7 +86,7 @@ module fifo_asyn(/*AUTOARG*/
 
 endmodule // asyn_fifo
 // Local Variables:
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:
 
 

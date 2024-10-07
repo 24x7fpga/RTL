@@ -56,7 +56,7 @@ module tb_numConv();
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/numConv") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/numConv") 
 // End:
 
 

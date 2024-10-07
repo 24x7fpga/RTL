@@ -42,5 +42,5 @@ $dumpvars(0,tb_mux8_to_1);
 end 
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("/home/kiran/Projects/fpgaProjects/iVerilog/design/mux8_to_1/" "~/Projects/fpgaProjects/iVerilog/design/mux4_to_1/" ".") 
+// verilog-library-directories:("/home/kiran/Projects/FPGA_Projects/iVerilog/design/mux8_to_1/" "~/Projects/FPGA_Projects/iVerilog/design/mux4_to_1/" ".") 
 // End:

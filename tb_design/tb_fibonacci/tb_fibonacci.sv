@@ -53,5 +53,5 @@ module tb_fibonacci();
    end 
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:

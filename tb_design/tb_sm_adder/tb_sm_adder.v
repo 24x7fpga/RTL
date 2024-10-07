@@ -33,5 +33,5 @@ end
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("/home/kiran/fpgaProjects/iVerilog/design/sm_adder") 
+// verilog-library-directories:("/home/kiran/FPGA_Projects/iVerilog/design/sm_adder") 
 // End:

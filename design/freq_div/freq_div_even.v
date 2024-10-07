@@ -51,5 +51,5 @@ module freq_div_even #(parameter n = 4) (/*AUTOARG*/
 
 endmodule // freq_div_even
 // Local Variables: 
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:

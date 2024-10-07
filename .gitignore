@@ -1,3 +1,10 @@
 *.DS_Store
 tb_design/**/*.vcd
-#tb_design/**/
+
+design/manchester_scheme/manchester_decoder.v
+design/spi/spi_master.sv
+design/spi/vivado/
+design/tmds/
+tb_design/tb_tmds/
+
+

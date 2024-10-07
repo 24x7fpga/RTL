@@ -32,5 +32,5 @@ module up_down_cntr #(parameter N = 4)(/*AUTOARG*/
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:

@@ -1,7 +1,7 @@
 `timescale 1ns/1ns
 module manchester_encoder (/*AUTOARG*/
    // Outputs
-   d_out,
+   d_encod,
    // Inputs
    clk, d_in
    );
@@ -9,11 +9,11 @@ module manchester_encoder (/*AUTOARG*/
    input clk;
    input d_in;
 
-   output d_out;
+   output d_encod;
 
-   assign d_out = d_in ^ clk;
+   assign d_encod = d_in ^ clk;
 
 endmodule // machester_encoder
 // Local Variables: 
-//verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:

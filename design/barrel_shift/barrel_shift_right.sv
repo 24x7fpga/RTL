@@ -27,7 +27,7 @@ module barrel_shift_right (/*AUTOARG*/
    endgenerate 
 endmodule // barrel_shift_right
 // Local Variables: 
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:
 
       

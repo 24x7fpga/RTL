@@ -117,5 +117,5 @@ module tb_fifo_buffer_syn();
  
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:

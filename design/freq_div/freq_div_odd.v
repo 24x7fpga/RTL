@@ -65,5 +65,5 @@ module freq_div_odd #(parameter n = 3) (/*AUTOARG*/
 
 endmodule // freq_div_odd
 // Local Variables: 
-// verilog-library-directories:("~/Projects/fpgaProjects/iVerilog/design/*") 
+// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
 // End:
