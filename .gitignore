@@ -7,4 +7,5 @@ design/spi/vivado/
 design/tmds/
 tb_design/tb_tmds/
 
-
+mov_files.sh
+replace.sh
