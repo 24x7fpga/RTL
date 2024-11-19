@@ -36,6 +36,7 @@ Ongoing list of design examples:
 - [[https://github.com/24x7fpga/iVerilog/blob/master/design/d_ff_en/d_ff_en.v][D-FF with Enable]]
 - [[https://24x7fpga.com/rtl_directory/2024_06_23_21_30_22_decoder/][Decoder]]
 - [[https://24x7fpga.com/rtl_directory/2024_06_14_22_07_44_de_multiplexer/][De-Multiplexer]]
+- [[https://24x7fpga.com/rtl_directory/2024_10_07_00_08_52_difference_between_and/][Difference between '==' and '===']]
 - [[https://24x7fpga.com/rtl_directory/2024_07_22_14_10_16_edge_detector/][Edge Detector]]
 - [[https://24x7fpga.com/rtl_directory/2024_06_23_20_40_25_encoder/][Encoder]]
 - [[https://github.com/24x7fpga/iVerilog/blob/master/design/even_parity/even_parity.v][Even Parity]]
