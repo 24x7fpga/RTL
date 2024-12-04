@@ -1,9 +1,6 @@
 `timescale 1ns/1ns 
 
-`ifdef COMP
 `include "comp.svh"
-`endif
-
 module tb_comparator(); 
    localparam t = 10; 
    localparam n = 4;
@@ -55,13 +52,13 @@ module tb_comparator();
 	 
 	// st_disp = (res != 4) ? (res != 2) ?  (res != 1) ? st_na : st_lt : st_gt : st_et; 
 	 if(exp_res == res)
-	   $display(" a=%d, b=%d, result= %s", a, b, st_disp);
+	   $display(" a=%0d, b=%0d, result= %s", a, b, st_disp);
 	 else begin
            $display(" Simulation FAIL ;(");
-	   $display(" a     =%d, b =%d", a, b);
-	   $display(" exp_et=%d, et=%d", exp_res[2], et);
-	   $display(" exp_gt=%d, gt=%d", exp_res[1], gt);
-	   $display(" exp_lt=%d, lt=%d", exp_res[0], lt);
+	   $display(" a=%0d, b=%0d", a, b);
+	   $display(" exp_et=%0d, et=%0d", exp_res[2], et);
+	   $display(" exp_gt=%0d, gt=%0d", exp_res[1], gt);
+	   $display(" exp_lt=%0d, lt=%0d", exp_res[0], lt);
 	 end
       end
       $display(" Simulation PASS ;)");

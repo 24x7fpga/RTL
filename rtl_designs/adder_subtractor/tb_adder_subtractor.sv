@@ -1,9 +1,6 @@
 `timescale 1ns/1ns
 
-`ifdef ADD_SUB
 `include "add_sub.svh"
-`endif
-
 module tb_adder_subtractor();
    localparam t = 10;
    localparam N = 4;
