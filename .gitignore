@@ -1,11 +1,14 @@
 *.DS_Store
-tb_design/**/*.vcd
 
-design/manchester_scheme/manchester_decoder.v
-design/spi/spi_master.sv
-design/spi/vivado/
-design/tmds/
-tb_design/tb_tmds/
+rtl_designs/manchester_scheme/manchester_decoder.v
+rtl_designs/spi/spi_master.sv
+rtl_designs/spi/vivado/
+rtl_designs/tmds/
+
 
 mov_files.sh
 replace.sh
+
+rtl_designs/**/*.vcd
+rtl_designs/**/*.vvp
+rtl_designs/**/obj_dir
