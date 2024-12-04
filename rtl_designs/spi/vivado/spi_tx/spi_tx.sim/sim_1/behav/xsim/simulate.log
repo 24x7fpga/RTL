@@ -1,4 +1,0 @@
-Time resolution is 1 ps
-tx_dout = 95 and rx_dout = 95
-Simulation PASS ;)
-$finish called at time : 8472 ns : File "/home/kiran/Projects/fpgaProjects/iVerilog/tb_design/tb_spi/tb_spi.sv" Line 53

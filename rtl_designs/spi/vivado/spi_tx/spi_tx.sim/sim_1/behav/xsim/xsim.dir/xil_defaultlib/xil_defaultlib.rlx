@@ -1,9 +1,0 @@
-0.7
-2020.2
-Oct 14 2022
-05:07:14
-/home/kiran/Projects/fpgaProjects/iVerilog/design/spi/spi.sv,1718682324,systemVerilog,,/home/kiran/Projects/fpgaProjects/iVerilog/design/spi/spi_rx.sv,,spi,,uvm,,,,,,
-/home/kiran/Projects/fpgaProjects/iVerilog/design/spi/spi_rx.sv,1718688918,systemVerilog,,/home/kiran/Projects/fpgaProjects/iVerilog/design/spi/spi_tx.sv,,spi_rx,,uvm,,,,,,
-/home/kiran/Projects/fpgaProjects/iVerilog/design/spi/spi_tx.sv,1718688663,systemVerilog,,/home/kiran/Projects/fpgaProjects/iVerilog/tb_design/tb_spi/tb_spi.sv,,spi_tx,,uvm,,,,,,
-/home/kiran/Projects/fpgaProjects/iVerilog/design/spi/vivado/spi_tx/spi_tx.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
-/home/kiran/Projects/fpgaProjects/iVerilog/tb_design/tb_spi/tb_spi.sv,1718688732,systemVerilog,,,,tb_spi,,uvm,,,,,,
