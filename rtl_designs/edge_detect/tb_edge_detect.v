@@ -7,7 +7,7 @@ module tb_edge_detect();
    reg	      din;
   
    reg [0:20] seq = 21'b001100101100010011010;
-  
+   //reg [20:0] seq = 21'b010110010001101001100;
    /*AUTOREG*/ 
    /*AUTOWIRE*/ 
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
