@@ -35,5 +35,5 @@ module fibonacci #(parameter N = 16)(/*AUTOARG*/
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/fibonacci" ".")
 // End:

@@ -33,5 +33,5 @@ module reg_file_dual_port (/*AUTOARG*/
 
 endmodule // reg_file_dual_port
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/fifo_buffer_syn" ".")
 // End: 

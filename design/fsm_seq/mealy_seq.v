@@ -83,6 +83,6 @@ module mealy_seq(/*AUTOARG*/
 
 endmodule // mealy_seq
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/fsm_seq" ".")
 // End:
    

@@ -22,7 +22,7 @@ module mux4_to_1(/*autoarg*/
      end
 endmodule // mux4_to_1
 // Local Variable:
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design")
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/mux4_to_1" ".")
 // End:
    
    

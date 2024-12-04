@@ -35,5 +35,5 @@ module fsm_pos_edge(/*AUTOARG*/
  
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/fsm_pos_edge" ".")
 // End:

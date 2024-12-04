@@ -105,5 +105,5 @@ module uart_tx #(parameter DBIT = 8, SB_TICK = 16)(/*AUTOARG*/
 	
 endmodule // uart_tx
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*" ".") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/apb" ".")
 // End:

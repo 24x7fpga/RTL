@@ -25,6 +25,6 @@ module simp_ring_cntr #(parameter N = 4)(/*AUTOARG*/
 
 endmodule // simp_ring_cntr
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/ring_cntr" ".")
 // End:
    

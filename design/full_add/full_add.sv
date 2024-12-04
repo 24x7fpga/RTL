@@ -17,5 +17,5 @@ module full_add(/*AUTOARG*/
  
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/full_add" ".")
 // End:

@@ -26,5 +26,5 @@ module rom #(parameter N = 7)(/*AUTOARG*/
    	
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/rom" ".")
 // End:

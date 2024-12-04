@@ -33,5 +33,5 @@ wire			dout_mealy;			// From moore of fsm_dual_edge_mealy.v, ...
 			    .din		(din)); 
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/fsm_dual_edge" ".")
 // End: 

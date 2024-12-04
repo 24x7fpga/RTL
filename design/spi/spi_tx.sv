@@ -159,5 +159,5 @@ module spi_tx #(parameter mode = 0, dvsr = 31, width = 8) (/*AUTOARG*/
    
 endmodule // spi_tx 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/spi" ".")
 // End:

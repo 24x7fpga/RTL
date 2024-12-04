@@ -92,5 +92,5 @@ module casex_nd_casez(/*AUTOARG*/
  
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/casex_nd_casez" ".")
 // End:

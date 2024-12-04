@@ -27,5 +27,5 @@ module shift_register #(parameter N = 4)(/*AUTOARG*/
  
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/shift_register" ".")
 // End:

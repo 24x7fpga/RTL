@@ -47,5 +47,5 @@ module even_parity(/*AUTOARG*/
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/even_parity" ".")
 // End:

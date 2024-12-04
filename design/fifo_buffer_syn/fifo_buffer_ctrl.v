@@ -120,5 +120,5 @@ module fifo_buffer_ctrl(/*AUTOARG*/
 	     
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/fifo_buffer_syn" ".")
 // End: 

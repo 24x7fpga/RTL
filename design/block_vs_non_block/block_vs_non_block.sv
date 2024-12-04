@@ -49,5 +49,5 @@ module block_vs_non_block(/*AUTOARG*/
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/block_vs_non_block" ".")
 // End:

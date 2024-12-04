@@ -55,7 +55,7 @@ module fifo_rd_ptr(/*AUTOARG*/
 
 endmodule // fifo_rd_ptr
 // Local Variables:
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/fifo_asyn" ".")
 // End:
 	   
    

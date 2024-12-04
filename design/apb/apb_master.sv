@@ -100,5 +100,5 @@ module apb_master(/*AUTOARG*/
  
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/apb/" ".") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/apb" ".")
 // End:

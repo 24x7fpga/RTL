@@ -26,5 +26,5 @@ module equals(/*AUTOARG*/
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/equals/") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/equals" ".")
 // End:

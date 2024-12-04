@@ -33,5 +33,5 @@ module mux8_to_1(/*AUTOARG*/
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/mux4_to_1/" ".") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/mux8_to_1" ".")
 // End:

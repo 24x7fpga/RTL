@@ -23,5 +23,5 @@ module decoder3_to_8 #(parameter width = 3)(/*AUTOARG*/
    
 endmodule 
 // Local Variables: 
-// verilog-library-directories:("~/Projects/FPGA_Projects/iVerilog/design/*") 
+// verilog-library-directories: ("~/Projects/FPGA_Projects/RTL/designs/decoder3_to_8" ".")
 // End: 
