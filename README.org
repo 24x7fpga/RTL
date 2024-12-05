@@ -1,8 +1,19 @@
-#+title: RTL Design Blocks: Basic to Advance 
+#+title: RTL Design Blocks: Basic to Advance
+#+startup: showeverything
+#+options: toc:nil
+  
+* Table of Contents :toc:
+- [[#features][Features]]
+- [[#folder-structure][Folder Structure]]
+- [[#python-scripts][Python Scripts]]
+  - [[#rtl_scripts][rtl_scripts]]
+  - [[#iv_scripts][iv_scripts]]
+  - [[#veri_scripts][veri_scripts]]
+  - [[#vivado_scripts][vivado_scripts]]
+  - [[#clean_scripts][clean_scripts]]
+- [[#ongoing-list-of-design-examples][Ongoing list of design examples]]
 
-This repository contains a collection of RTL design blocks implemented in Verilog and SystemVerilog, designed for efficient and reusable digital system development.
-
-** Features
+* Features
 
 - RTL Design Blocks: Modular designs for various digital logic components.
    
@@ -14,7 +25,7 @@ This repository contains a collection of RTL design blocks implemented in Verilo
 
 - Automation: [[https://github.com/24x7fpga/Python_Scripts][Python_Scripts]] to streamline the design, simulation, and verification workflows.
 
-** Folder Structure
+* Folder Structure
 
 The repository is organized to facilitate efficient RTL design and simulation processes. Below is a breakdown of the folder structure and its contents:
 
@@ -49,7 +60,7 @@ RTL
    - [[https://github.com/24x7fpga/RTL/blob/master/rtl_templates/package.svh][package.svh]]: Template for defining SystemVerilog packages for parameterized designs.
    - [[https://github.com/24x7fpga/RTL/blob/master/rtl_templates/tb_design.sv][tb_design.sv]]: Template for creating testbenches for verifying RTL modules.
 
-** Python Scripts
+* Python Scripts
 
 The [[https://github.com/24x7fpga/Python_Scripts/tree/master][Python_Scripts]] repository includes several Python scripts that automate and simplify the design and simulation processes for various tools. These scripts are used to automate repetative tasks such project creation, simulation, etc. The folder stucture is shown below: 
 
@@ -86,20 +97,20 @@ A detailed description of all the automation scripts can be found [[https://gith
 
 For streamlining ==RTL design and simulation==, following scripts are utilized:
 
-*** [[https://github.com/24x7fpga/Python_Scripts/tree/master/rtl_scripts][rtl_scripts]]
+** [[https://github.com/24x7fpga/Python_Scripts/tree/master/rtl_scripts][rtl_scripts]]
  
 - Purpose: Automates the creation of RTL design and testbench files. Ensures consistency in design and testbench structure by leveraging predefined templates.
             
 - [[https://github.com/24x7fpga/Python_Scripts/blob/master/rtl_scripts/rtl_design.py][rtl_design.py]]: Creates a new folder in the rtl_designs directory.Generates design and testbench files using templates from the rtl_templates directory.
     
-*** [[https://github.com/24x7fpga/Python_Scripts/tree/master/iv_scripts][iv_scripts]]
+** [[https://github.com/24x7fpga/Python_Scripts/tree/master/iv_scripts][iv_scripts]]
         
 - Purpose: Facilitates simulation and cleanup when using Icarus Verilog. Automates Icarus Verilog-based design workflows for efficient simulation and cleanup.
         
 - [[https://github.com/24x7fpga/Python_Scripts/blob/master/iv_scripts/iv_run.py][iv_run.py]]: Simulates the RTL design using Icarus Verilog.
 - [[https://github.com/24x7fpga/Python_Scripts/blob/master/iv_scripts/iv_clean.py][iv_clean.py]]: Removes all files generated during the Icarus Verilog simulation, such as .vvp and .vcd files.
         
-*** [[https://github.com/24x7fpga/Python_Scripts/tree/master/veri_scripts][veri_scripts]]
+** [[https://github.com/24x7fpga/Python_Scripts/tree/master/veri_scripts][veri_scripts]]
         
 - Purpose: Manages the simulation process using Verilator and provides a seamless Verilator simulation and cleanup workflow.
              
@@ -109,7 +120,7 @@ For streamlining ==RTL design and simulation==, following scripts are utilized:
 
 - [[https://github.com/24x7fpga/Python_Scripts/blob/master/veri_scripts/config.vlt][config.vlt]]: The ==config.vlt== file in Verilator customizes simulation settings and overrides default behaviors. 
         
-*** [[https://github.com/24x7fpga/Python_Scripts/tree/master/vivado_scripts][vivado_scripts]]
+** [[https://github.com/24x7fpga/Python_Scripts/tree/master/vivado_scripts][vivado_scripts]]
         
 - Purpose: Integrates Vivado TCL scripting for project creation and simulation.
             
@@ -117,15 +128,15 @@ For streamlining ==RTL design and simulation==, following scripts are utilized:
             
 - [[https://github.com/24x7fpga/Python_Scripts/blob/master/vivado_scripts/vivado_clean.py][vivado_clean.py]]: Removes Vivado-generated project files, logs, and other artifacts.
         
-*** [[https://github.com/24x7fpga/Python_Scripts/tree/master/clean_scripts][clean_scripts]]
+** [[https://github.com/24x7fpga/Python_Scripts/tree/master/clean_scripts][clean_scripts]]
         
 - Purpose: General cleanup utility for removing simulation files and logs across all tools. Simplifies maintaining a clean working environment.
             
 - [[https://github.com/24x7fpga/Python_Scripts/blob/master/clean_scripts/clean_all.py][clean_all.py]]: Deletes all files, logs, and project directories created by various tools (e.g., Icarus Verilog, Verilator, and Vivado).
-        
+       
 These scripts collectively enhance productivity by automating repetitive tasks, ensuring consistency, and providing efficient workflows for RTL design and simulation using Icarus Verilog, Verilator, and Vivado.
 
-** Ongoing list of design examples:
+* Ongoing list of design examples
 
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/adder_subtractor][Adder Subtractor]]
 - [[https://24x7fpga.com/rtl_directory/2024_08_05_16_05_55_always_and_always_comb/][Always@(*) and Always_Comb]]
