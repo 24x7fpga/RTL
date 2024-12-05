@@ -1,14 +1,20 @@
 *.DS_Store
 
-rtl_designs/manchester_scheme
-rtl_designs/spi/spi_master.sv
-rtl_designs/spi/vivado/
-rtl_designs/tmds/
-
-
 mov_files.sh
 replace.sh
+rename_ext.sh
+
+.Xil
+vivado*
 
 rtl_designs/**/*.vcd
 rtl_designs/**/*.vvp
 rtl_designs/**/obj_dir/
+rtl_designs/**/proj/
+rtl_designs/i2c/project_1/
+
+
+rtl_designs/manchester_scheme
+rtl_designs/spi/spi_master.sv
+rtl_designs/spi/vivado/
+rtl_designs/tmds/
