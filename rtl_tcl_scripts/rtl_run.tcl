@@ -15,7 +15,6 @@ set project_location [lindex $argv 1]
 puts "Project Name: $project_name"
 puts "Project Location: $project_location"
 
-
 # Create a new Vivado project
 create_project $project_name $project_location/proj -part xc7z020clg400-1 -force
 
@@ -25,11 +24,7 @@ add_files [glob -nocomplain $project_location/*.sv]
 set_property top tb_$project_name [get_filesets sim_1]
 set_property top_lib xil_defaultlib [get_filesets sim_1]
 
-
-#set_property top test [current_fileset]
-#set_property top_file {$project_location/$project_name.sv} [current_fileset]
-
-# default simulation runtime is removed; by default it is set to 1000ns
+# Default simulation runtime is removed; by default it is set to 1000ns
 set_property -name {xsim.simulate.runtime} -value {} -objects [get_filesets sim_1]
 
 # Start Simulation
