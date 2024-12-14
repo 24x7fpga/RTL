@@ -8,8 +8,10 @@ rtl_designs/**/*.vcd
 rtl_designs/**/*.vvp
 rtl_designs/**/obj_dir/
 rtl_designs/**/proj/
+rtl_designs/**/archieved/
 
 rtl_designs/manchester_scheme
 rtl_designs/spi/spi_master.sv
 rtl_designs/spi/vivado/
 rtl_designs/tmds/
+rtl_designs/i2c/
