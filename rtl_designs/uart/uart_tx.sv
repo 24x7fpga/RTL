@@ -73,12 +73,12 @@ module uart_tx #(parameter DBIT = 8, SB_TICK = 16)(/*AUTOARG*/
 	   tx_nxt = dt_reg[0];
 	   if(s_tick)
 	     if(tk_reg == 15)begin
-		      tk_nxt = 0;
-		      dt_nxt = dt_reg >> 1;
-            if(bt_nxt == (DBIT-1))
-              st_nxt = stop;
-            else
-              bt_nxt = bt_reg + 1;
+		tk_nxt = 0;
+		dt_nxt = dt_reg >> 1;
+		if(bt_nxt == (DBIT-1))
+		  st_nxt = stop;
+		else
+		  bt_nxt = bt_reg + 1;
 	     end
 	     else
 	       tk_nxt = tk_reg + 1;
@@ -94,7 +94,7 @@ module uart_tx #(parameter DBIT = 8, SB_TICK = 16)(/*AUTOARG*/
 	     else
 	       tk_nxt = tk_reg +1;
 	end // case: stop
-
+	
       endcase // case (st_reg)
    end // always_comb
    
