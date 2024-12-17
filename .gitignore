@@ -14,4 +14,3 @@ rtl_designs/manchester_scheme
 rtl_designs/spi/spi_master.sv
 rtl_designs/spi/vivado/
 rtl_designs/tmds/
-rtl_designs/i2c/
