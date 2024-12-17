@@ -112,7 +112,6 @@ interface apb_intf(input clk);
       // $display("tx busy = %d", m_prdata[0]);
       @(posedge clk);
 
-      
       p_addr <= `RX_BUSY;
       p_sel  <= 4'h3;
       p_wr   <= 1'h0;
@@ -132,7 +131,6 @@ interface apb_intf(input clk);
  
    endtask // read_status
 
-   
    task read();
       p_addr <= `RX_DOUT;
       p_sel  <= 4'h3;
@@ -148,12 +146,10 @@ interface apb_intf(input clk);
  
    endtask // read_status
 
-   
    // checking output data
    // come up with a better logic
    logic [`WIDTH-1:0] assoc [72:0];
   
-    
     always @(posedge clk) begin
 	 if(rst) 
 	    assoc[p_addr] <= pw_data;
@@ -168,8 +164,4 @@ interface apb_intf(input clk);
       end
    endfunction // disp
    
-   
-      
-
 endinterface // apb_intf
-
