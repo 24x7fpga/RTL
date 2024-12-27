@@ -72,20 +72,20 @@ assign clk = i_clk;
       // Transmit Slave Address
       $display("------------ Transmit Slave Address ------------");
       @(posedge clk);
-      init    <= 0;
+      init      <= 0;
       wait(s_busy);
-      collect <= 1'b1;
+      collect   <= 1'b1;
       @(posedge clk);
       wait(!s_busy);
-      sda_res <= 1;
-      sda_trans<=0;
-      collect <= 1'b0;
+      sda_res   <= 1;
+      sda_trans <=0;
+      collect   <= 1'b0;
       if(col_data[7:1] == sl_addr)
         $display("PASS ;) :: Slave Addr = %h", col_data[7:1]);
       else
         $error("FAIL ;( :: Slave Addr = %h", col_data[7:1]);
       wait(s_busy);
-      sda_res <= 0;
+      sda_res   <= 0;
       
       // Command Register Address
       $display("----------- Transmit Command Address -----------");
@@ -108,59 +108,59 @@ assign clk = i_clk;
       $display("------------- Transmit Command DATA ------------");
       @(posedge clk);
       wait(s_busy);
-      collect <= 1'b1;
+      collect   <= 1'b1;
       @(posedge clk);
       wait(!s_busy);
-      sda_res <= 1;
-      collect <= 1'b0;
-      sda_trans<=0;
+      sda_res   <= 1;
+      collect   <= 1'b0;
+      sda_trans <=0;
       if(col_data == sl_data)
         $display("PASS ;) :: Command Data = %h", col_data);
       else
         $error("FAIL ;( :: Command Data = %h", col_data);
       slave_data <= col_data;
       wait(s_done);
-      sda_res <= 0;
+      sda_res  <= 0;
       wait(sda & scl);
       #(`DVSR*10)@(posedge clk);
    endtask; // write
    
    task recev(logic [6:0] sl_addr, logic [7:0] sl_cmd);   
-      init <= 1;
+      init    <= 1;
       sda_res <= 0;
-      rd_wr <= 0;
-      wr    <= 0;
-      addr <= sl_addr;
-      cmd  <= sl_cmd;
+      rd_wr   <= 0;
+      wr      <= 0;
+      addr    <= sl_addr;
+      cmd     <= sl_cmd;
       collect <= 1'b0;
-      r <= 1'b0;
+      r       <= 1'b0;
       // send slave address
       $display("------------ Transmit Slave Address ------------");
       @(posedge clk);
-      init <= 0;
+      init      <= 0;
       wait(s_busy);
-      collect <= 1'b1;
+      collect   <= 1'b1;
       @(posedge clk);
       wait(!s_busy);
-      sda_res <= 1;
-      sda_trans<=0;
-      collect <= 1'b0;
+      sda_res   <= 1;
+      sda_trans <=0;
+      collect   <= 1'b0;
       if(col_data[7:1] == sl_addr)
         $display("PASS ;) :: Slave Addr = %h", col_data[7:1]);
       else
         $error("FAIL ;( :: Slave Addr = %h", col_data[7:1]);
       wait(s_busy);
-      sda_res <= 0;
+      sda_res  <= 0;
       
       // command pointer
       $display("----------- Transmit Command Address -----------");
       @(posedge clk);
       wait(s_busy);
-      collect <= 1'b1;
+      collect  <= 1'b1;
       @(posedge clk);
       wait(!s_busy);
-      sda_res <= 1;
-      collect <= 1'b0;
+      sda_res  <= 1;
+      collect  <= 1'b0;
       if(col_data == sl_cmd)
         $display("PASS ;) :: Command Pointer = %h", col_data);
       else
@@ -181,12 +181,12 @@ assign clk = i_clk;
       $display("----------------- Receive Data -----------------");
        // send slave address
       @(posedge clk);
-      init     <= 0;
+      init      <= 0;
       wait(s_busy);
-      collect  <= 1'b1;
+      collect   <= 1'b1;
       @(posedge clk);
       wait(!s_busy);
-      sda_res  <= 1;
+      sda_res   <= 1;
       sda_trans <=0;
       collect   <= 1'b0;
       transmit  <= 1'b0;
@@ -198,10 +198,10 @@ assign clk = i_clk;
         
       // recev data  
       wait(s_busy);
-      sda_res  <= 1;
-      r <= 1'b1;
-      transmit <= 1'b1;
-      collect  <= 1'b1;
+      sda_res   <= 1;
+      r         <= 1'b1;
+      transmit  <= 1'b1;
+      collect   <= 1'b1;
       @(posedge clk);
       wait(!s_busy);
           r        <= 1'b0;
@@ -254,20 +254,19 @@ always_comb begin
     endcase
 end
         
-        
 // Verification
 // Receive data from SDA when MASTER is transmitting   
 always_ff@(posedge scl)begin
     if(collect)begin
         col_data[col_cnt] = sda;
         if(col_cnt == 0)begin
-            col_cnt = 7;
+            col_cnt <= 7;
         end else begin
-            col_cnt = col_cnt - 1;
+            col_cnt <= col_cnt - 1;
         end
     end else begin
-        col_data = 0;
-        col_cnt  = 7;
+        col_data <= 0;
+        col_cnt  <= 7;
     end
 end
 // Transmit data on SDA for the MASTER to receiving 
@@ -275,7 +274,7 @@ always_ff@(posedge scl)begin
     if(transmit)begin
         sda_trans<= trans_data[(8*r)+trn_cnt];
         if(trn_cnt == 0)begin
-            trn_cnt = 7;
+            trn_cnt <= 7;
         end else begin
             trn_cnt <= trn_cnt - 1;
         end
