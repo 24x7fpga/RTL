@@ -20,8 +20,8 @@ module spi #(parameter mode = 0, dvsr = 31, width = 8)(/*AUTOARG*/
   /*AUTOWIRE*/ 
   // Beginning of automatic wires (for undeclared instantiated-module outputs)
   wire			cs;			// From MOD1 of spi_tx.v
-  wire			miso;			// From MOD1 of spi_rx.v
-  wire			mosi;			// From MOD1 of spi_tx.v
+  wire			sdi;			// From MOD1 of spi_rx.v
+  wire			sdo;			// From MOD1 of spi_tx.v
   wire			sclk;			// From MOD1 of spi_tx.v
   wire			tx_rdy;			// From MOD1 of spi_tx.v
   // End of automatics
@@ -32,7 +32,7 @@ spi_tx #(/*AUTOINSTPARAM*/
 	 .dvsr				(dvsr),
 	 .width				(width)) SPI_MASTER (/*AUTOINST*/
 						       // Outputs
-						       .mosi		(mosi),
+						       .sdo		(sdo),
 						       .sclk		(sclk),
 						       .cs		(cs),
 						       .tx_dout		(tx_dout[width-1:0]),
@@ -40,7 +40,7 @@ spi_tx #(/*AUTOINSTPARAM*/
 						       .rx_vld		(rx_vld),
 						       .din		(din[width-1:0]),
 						       // Inputs
-						       .miso		(miso),
+						       .sdi		(sdi),
 						       .tx_vld		(tx_vld),
 						       .rst		(rst),
 						       .clk		(clk)); 
@@ -49,10 +49,10 @@ spi_rx #(/*AUTOINSTPARAM*/
 	 .mode				(mode),
 	 .width				(width)) SPI_SLAVE (/*AUTOINST*/
 						       // Outputs
-						       .miso		(miso),
+						       .sdi		(sdi),
 						       .rx_dout		(rx_dout[width-1:0]),
 						       // Inputs
-						       .mosi		(mosi),
+						       .sdo		(sdo),
 						       .sclk		(sclk),
 						       .cs		(cs),
 						       .rst		(rst),

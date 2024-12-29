@@ -1,16 +1,16 @@
 `timescale 1ns/1ns
 module spi_rx #(parameter mode = 0, width = 8) (/*AUTOARG*/
    // Outputs
-   miso, rx_dout,
+   sdi, rx_dout,
    // Inputs
-   mosi, sclk, cs, rst, clk
+   sdo, sclk, cs, rst, clk
    );
    // outputs
-   output miso;
+   output sdi;
    output [width-1:0] rx_dout;
 
    //input
-   input	      mosi;
+   input	      sdo;
    input	      sclk;
    input	      cs;
    input	      rst;
@@ -19,7 +19,7 @@ module spi_rx #(parameter mode = 0, width = 8) (/*AUTOARG*/
 
    /*AUTOREG*/
    // Beginning of automatic regs (for this module's undeclared outputs)
-   reg			miso;
+   reg			sdi;
    // End of automatics
    /*AUTOWIRE*/
    
@@ -42,8 +42,8 @@ module spi_rx #(parameter mode = 0, width = 8) (/*AUTOARG*/
              st_reg <= st_nxt;
              cnt_reg  <= cnt_nxt;
              if(~cs)begin
-                din_reg <= {din_reg[width-2:0],mosi};
-                miso <= din_reg[width-1];
+                din_reg <= {din_reg[width-2:0],sdo};
+                sdi <= din_reg[width-1];
              end
           end
      end
@@ -58,8 +58,8 @@ module spi_rx #(parameter mode = 0, width = 8) (/*AUTOARG*/
              st_reg <= st_nxt;
              cnt_reg  <= cnt_nxt;
              if(~cs)begin
-                din_reg <= {din_reg[width-2:0],mosi};
-                miso <= din_reg[width-1];
+                din_reg <= {din_reg[width-2:0],sdo};
+                sdi <= din_reg[width-1];
              end
           end
      end
