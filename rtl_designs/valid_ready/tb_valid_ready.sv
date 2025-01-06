@@ -13,17 +13,17 @@ module tb_valid_ready;
 
    valid_ready #(/*AUTOINSTPARAM*/
 		 // Parameters
-		 .N			(N),
-		 .V			(V))DUT (
+		 .N		 (N),
+		 .V		 (V))       DUT (
 						 // Outputs
-						 .up_data		(intf.up_data[N-1:0]),
-						 .up_vld		(intf.up_vld),
-						 .dwn_rdy		(intf.dwn_rdy),
+						 .up_data      	(intf.up_data[N-1:0]),
+						 .up_vld       	(intf.up_vld),
+						 .dwn_rdy	(intf.dwn_rdy),
 						 // Inputs
-						 .up_rdy		(intf.up_rdy),
-						 .dwn_vld		(intf.dwn_vld),
-						 .dwn_data		(intf.dwn_data[N-1:0]),
-						 .clk			(intf.clk),
+						 .up_rdy	(intf.up_rdy),
+						 .dwn_vld	(intf.dwn_vld),
+						 .dwn_data	(intf.dwn_data[N-1:0]),
+						 .clk		(intf.clk),
 						 .rst           (intf.rst));
 
    // Generate Clock

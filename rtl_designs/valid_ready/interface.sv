@@ -11,7 +11,6 @@ interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
    
    // efficiency calculate
    logic [63:0] cnt;
-   
 
    assign clk = m_clk;
    
@@ -110,14 +109,13 @@ interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
    
    // count the number of transactions
    always_ff@(posedge clk)begin
-    if(rst)
-    cnt <= 0;
-    else begin
-    if(dwn_rdy & dwn_vld)
-    cnt <= cnt + 1;
-    end
-    end
-    
+      if(rst)
+	cnt <= 0;
+      else begin
+	 if(dwn_rdy & dwn_vld)
+	   cnt <= cnt + 1;
+      end
+   end
    
 endinterface // valid_ready_intf
 // Local Variables:
