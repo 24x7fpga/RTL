@@ -1,8 +1,8 @@
 /*
  Design: Sign-magnitude Adder
- Description: Designing a simple signed magnitude adder, where the MSB of the interger value is the sign and the remaining bits are magnitude of the number.
+ Description: Designing a simple signed magnitude adder, where the MSB of the integer value is the sign and the remaining bits are magnitude of the number.
  - When two operands have the same sign, the magnitudes are added and the sign is kept.
- - When the operands have differents signs, the smallest of the two number is subtracted from the larger one and the sign of the largest number is kept.
+ - When the operands have different signs, the smallest of the two number is subtracted from the larger one and the sign of the largest number is kept.
  */
 
 module sm_adder #(parameter n = 8)(/*AUTOARG*/
