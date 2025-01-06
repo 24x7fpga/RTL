@@ -1,8 +1,10 @@
 `include "package.svh"
 module tb_valid_ready;
-   // Clock
+   // Master Clock
    logic      m_clk;
+   // Data Width
    localparam N = 4;
+   // Valid/Ready Version 
    localparam V = 0;
  
    /*AUTOREG*/
@@ -11,7 +13,7 @@ module tb_valid_ready;
    // Add Interface
    valid_ready_intf #(N,V) intf (m_clk);
 
-   valid_ready #(/*AUTOINSTPARAM*/
+   valid_ready #(
 		 // Parameters
 		 .N		 (N),
 		 .V		 (V))       DUT (

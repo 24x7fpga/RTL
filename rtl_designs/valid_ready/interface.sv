@@ -1,6 +1,6 @@
 `include "package.svh"
 interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
-   // Reset
+   // Clock and Reset
    logic clk;
    logic rst;
 
@@ -9,7 +9,7 @@ interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
    logic	 up_vld, dwn_vld;
    logic	 up_rdy, dwn_rdy;
    
-   // efficiency calculate
+   // Transaction counter
    logic [63:0] cnt;
 
    assign clk = m_clk;
@@ -23,10 +23,11 @@ interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
    task run();
       $display("---------------------------------------------------------------");
       if(V==1)
-	$display("------------------------ Variation 1 --------------------------");
+	$display("------------------------- Version 1 ---------------------------");
 	  else    
-	$display("------------------------ Variation 2 --------------------------");
+	$display("------------------------- Version 2 ---------------------------");
       $display("---------------------------------------------------------------");
+      
       // constant dwn_vld
       $display("------------------- DWN VLD = 1 and UP RDY = 1 ----------------");
       dwn_vld <= 1'b1;
