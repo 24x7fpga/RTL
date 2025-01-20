@@ -11,6 +11,8 @@ interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
    
    // Transaction counter
    logic [63:0] cnt;
+   //
+   logic	task_end;
 
    assign clk = m_clk;
    
@@ -21,6 +23,8 @@ interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
    endtask // reset
 
    task run();
+      task_end <= 0;
+      
       $display("---------------------------------------------------------------");
       if(V==1)
 	$display("------------------------- Version 1 ---------------------------");
@@ -64,12 +68,54 @@ interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
          up_rdy  <= $random();
          @(posedge clk);
       end
-      
+     
+      task_end <= 1;
+      @(posedge clk);
+ 
       $display("---------------------------------------------------------------");
       $display("Total No. of Transactions = %0d", cnt);
       $display("---------------------------------------------------------------");
    endtask // run
 
+ task back_pressure();
+      task_end <= 0;
+      
+      $display("---------------------------------------------------------------");
+      $display("------------------------ Valid  Ready -------------------------");
+      $display("------------------------ Backpressure -------------------------");
+
+      // fill pipeline
+      $display("------------------- DWN VLD = 1 and UP RDY = 1 ----------------");
+      dwn_vld <= 1'b1;
+      for(int i=0; i<32; i= i+1)begin
+         up_rdy <= 1'b1;
+         @(posedge clk);
+	 up_rdy <= 1'b0;
+	 #(2*`T) @(posedge clk);
+      end
+
+      // generate stalls
+      $display("---------------- DWN VLD = 1 and UP RDY = RANDOM --------------");
+      dwn_vld <= 1'b1;
+      for(int i=0; i<32; i= i+1)begin
+         up_rdy <= $random();
+         @(posedge clk);
+      end
+
+      // flush pipeline
+      dwn_vld <= 1'b0;
+      up_rdy  <= 1'b1;
+      while(up_vld) @(posedge clk);
+
+      task_end <= 1;
+      @(posedge clk);
+      
+      $display("---------------------------------------------------------------");
+      $display("Total No. of Transactions = %0d", cnt);
+      $display("---------------------------------------------------------------"); 
+   endtask // back_pressure 
+ 
+ 
    // data generation
    always_ff@(posedge clk)begin
     if(rst)
@@ -111,9 +157,11 @@ interface valid_ready_intf #(parameter N = 4, V = 0) (input m_clk);
    // count the number of transactions
    always_ff@(posedge clk)begin
       if(rst)
-	cnt <= 0;
+	cnt <= '0;
       else begin
-	 if(dwn_rdy & dwn_vld)
+	 if(task_end)
+	   cnt <= '0;
+	 else if(dwn_rdy & dwn_vld)
 	   cnt <= cnt + 1;
       end
    end

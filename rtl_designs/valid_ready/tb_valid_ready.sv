@@ -1,3 +1,4 @@
+
 `include "package.svh"
 module tb_valid_ready;
    // Master Clock
@@ -33,7 +34,8 @@ module tb_valid_ready;
 
    initial begin
       intf.reset();
-      intf.run(); 
+      intf.run();
+      //intf.back_pressure();  
       // End Sim
       $finish;
    end
