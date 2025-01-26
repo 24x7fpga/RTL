@@ -150,7 +150,7 @@ These scripts collectively enhance productivity by automating repetitive tasks, 
 - [[https://24x7fpga.com/rtl_directory/2024_09_13_12_36_11_clock_gating/][Clock Gating]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_18_21_58_46_code_converter/][Code Converter]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_06_15_54_47_comparator/][Comparator]]
-- [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/d_ff_en][D-FF with Enable]]
+- [[https://24x7fpga.com/rtl_directory/2024_12_21_d_flip_flop_operation/][D-FF with Enable]]
 - [[https://24x7fpga.com/rtl_directory/2024_06_23_21_30_22_decoder/][Decoder]]
 - [[https://24x7fpga.com/rtl_directory/2024_06_14_22_07_44_de_multiplexer/][De-Multiplexer]]
 - [[https://24x7fpga.com/rtl_directory/2024_10_07_00_08_52_difference_between_and/][Difference between '==' and '===']]
