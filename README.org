@@ -1,3 +1,4 @@
+
 #+title: RTL Design Blocks: Basic to Advance
 #+startup: showeverything
 #+options: toc:nil
@@ -165,7 +166,8 @@ These scripts collectively enhance productivity by automating repetitive tasks, 
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/fsm_seq][FSM: Sequence detector]]
 - [[https://24x7fpga.com/rtl_directory/2024_06_08_11_32_42_full_adder/][Full Adder]]
 - [[https://24x7fpga.com/rtl_directory/2024_06_05_22_56_41_half_adder/][Half Adder]]
-- [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/i2c][I2C Protocol]]
+- [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/i2c][I2C Protocol]] 
+- [[https://24x7fpga.com/rtl_directory/2024_12_21_latch_and_flip_flop/][Latch]]
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/lfsr][Linear Feedback Shift Register]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_18_23_30_22_mod_n_counter/][Mod-N Counter]]
 - [[https://24x7fpga.com/rtl_directory/2024_06_13_12_22_45_multiplexer/][Multiplexer]]
