@@ -173,6 +173,7 @@ These scripts collectively enhance productivity by automating repetitive tasks, 
 - [[https://24x7fpga.com/rtl_directory/2024_06_13_12_22_45_multiplexer/][Multiplexer]]
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/mux_gates][MUX: Basic Gates]]
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/pwm][Pulse Width Modulator]]
+- [[https://24x7fpga.com/sv_directory/2025_01_14_scheduling_semantics/][Race Condition]]
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/reg_file][Register File]]
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/register][Register]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_22_11_17_17_ring_counter/][Ring Counter]]
@@ -185,6 +186,3 @@ These scripts collectively enhance productivity by automating repetitive tasks, 
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/univ_cntr][Universal Counter]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_10_20_30_35_universal_shift_register/][Universal Shift Register]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_16_22_30_28_up_down_counter/][Up/Down Counter]]
-
-
-
