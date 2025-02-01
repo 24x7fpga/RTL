@@ -186,3 +186,4 @@ These scripts collectively enhance productivity by automating repetitive tasks, 
 - [[https://github.com/24x7fpga/RTL/tree/master/rtl_designs/univ_cntr][Universal Counter]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_10_20_30_35_universal_shift_register/][Universal Shift Register]]
 - [[https://24x7fpga.com/rtl_directory/2024_07_16_22_30_28_up_down_counter/][Up/Down Counter]]
+- [[https://24x7fpga.com/rtl_directory/2024_11_29_18_17_10_valid_ready_protocol/][Valid-Ready]]
